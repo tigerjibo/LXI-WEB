@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-type" content="text/html"; charset="gb2312">
+<style>
+A {text-decoration:none;}
+#briefmenu,#productsmenu,#usermenu,#contactmenu{
+display: none;
+margin-left: 2em;
+}
+</style>
+</head>
+<body>
+<ul>
+<li><a id="brief" href="#">[+]LXI十类产品简介</a>
+<ul ID="briefmenu">
+<li><a href ="scope.html" target="conFrame">数字示波器</a></li>
+<li><a href ="dmm.html" target="conFrame">数字多用表</a></li>
+<li><a href ="fgen.html" target="conFrame">任意波形信号发生器</a></li>
+<li><a href ="dcpower.html" target="conFrame">可编程线性直流电源</a></li>
+<li><a href ="specan.html" target="conFrame">频谱分析仪</a></li>
+<li><a href ="counter_timer.html" target="conFrame">微波记数器/定时器</a></li>
+<li><a href ="logical.html" target="conFrame">逻辑分析仪</a></li>
+<li><a href ="switch.html" target="conFrame">通用开关</a></li>
+<li><a href ="singal.html" target="conFrame">信号分析仪器</a></li>
+<li><a href ="datacollect.html" target="conFrame">多功能数据采集仪</a></li>
+</ul>
+</li>
+<li><a id="products" href="#">[+]测量</a>
+<ul ID="productsmenu">
+<li><a href ="info.html"  target="conFrame">设备信息</a></li>
+<li><a href ="parament.html"  target="conFrame">设备数据</a></li>
+<li><a href ="measure.html"  target="conFrame">动态波形</a></li>
+</ul>
+</li>
+<li><a id="user" href="#">[+]XNMS用户信息</a>
+<ul ID="usermenu">
+<li><a href ="contact.html"  target="conFrame">管理员</a></li>
+<li><a href ="contact2.html"  target="conFrame">用户信息</a></li>
+</ul>
+</li>
+<li><a id="contact" href="#">[+]服务</a>
+<ul ID="contactmenu">
+<li><a href ="leavemessage.html"  target="conFrame">留言</a></li>
+<li><a href ="sendmaile.html"   target="conFrame">发邮件</a></li>
+<li><a href ="register.html"   target="conFrame">注册</a></li>
+</ul>
+</li>
+</ul>
+<script language="javascript" type="text/javascript" >
+function Toggle(e){
+if(!document.getElementById) return;
+if(!e) var e=window.event;
+whichlink = (e.target) ? e.target.id : e.srcElement.id;
+obj = document.getElementById(whichlink+"menu");
+visible=(obj.style.display=="block")
+key=document.getElementById(whichlink);
+keyname=key.firstChild.nodeValue.substring(3);
+if(visible){
+obj.style.display="none";
+key.firstChild.nodeValue ="[+]" + keyname;
+}else{
+obj.style.display="block";
+key.firstChild.nodeValue ="[-]" +keyname;
+}
+}
+document.getElementById("brief").onclick=Toggle;
+document.getElementById("products").onclick=Toggle;
+document.getElementById("user").onclick=Toggle;
+document.getElementById("contact").onclick=Toggle;
+</script>
+</body>
+</html>

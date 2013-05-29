@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+body {
+	margin: 0px;
+	margin: 0 auto;
+	background-color: white;
+	font-family: "宋体";
+	font-size: 13px;
+	color: #202020;
+	height:900px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.spanOperate{
+	color: red;
+}
+
+.spanButton {
+	border: solid 1px;
+	padding: 3;
+	background-color: #79b2fe;
+	color:white;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.pageMain {
+	font-size:13px;
+	margin:0px 0px 0px 0px;
+	width: 100%;
+	height: 20px;
+}
+
+.titleStyle{
+	width:520px;
+	height:25px;
+	font-size:18px;
+}

@@ -1,0 +1,64 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-type" content="text/html"; charset="gb2312">
+<script language="text/javascript" type="text/javascript">
+   function ready(){
+      if(document.form1.username.value.length== 0){
+		  alert("用户名不能为空！");
+		  return false;
+	  }
+	  if(document.form1.password.value.length== 0){
+		  alert("密码不能为空！");
+		  return false;
+	  }	  
+	 return true;
+   }
+</script>
+
+<title>XMS设备仪器管理</title>
+<link rel="stylesheet" type="text/css" href="css/back_login.css">
+<link rel="stylesheet" type="text/css" href="css/back_common.css">
+</head>
+<body id="main">
+<center>    	
+<div id="center">
+<div style="height: 28px; text-align: center; width: 100%">
+</div>
+<div id="thestyle">
+<form name ="form1" action="cgi-bin/login.cgi" method="POST"  onSubmit= "return ready();">
+<table cellpadding="3" cellspacing="0" border="0">
+<tr>
+<td>
+用户名
+</td>
+<td>
+<input class="inputFrameStyle" type="text" id="admin.username" name="username">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+密码
+</td>
+<td>
+<input style="width: 12em" type="password" id="admin.password"  name="password"/>
+</td>							
+<tr>
+<td></td>
+<td>
+<input type="submit" name="login" value="登录"
+style="cursor: pointer">
+<input type="checkbox" style="" />
+记住密码
+</td>
+<td>
+</td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+</center>
+</body>
+</html>

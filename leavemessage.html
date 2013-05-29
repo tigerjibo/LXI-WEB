@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-type" content="text/html"; charset="gb2312">
+<script language="text/javascript" type="text/javascript">
+function ready(){
+if(document.form2.User.value.length== 0){
+alert("用户名不能为空！");
+return false;
+}
+if(document.form2.email.value.indexOf("@")<0){
+alert("邮箱地址错误");
+return false;
+}
+if(document.form2.suggest.value.length==0){
+alert("意见栏不能为空");
+return false;
+}	  
+return true;
+}
+</script>
+	</HEAD>
+ 	<BODY>
+	<h1 align="center">留言板</h1>
+	<form name="form2" action="cgi-bin/leavemessage.cgi" method="post"  onSubmit= "return ready();">
+	<p>
+	<b>姓名 :</b><input name="User"  type="text" size="20">
+	</p> 
+	<p>
+	<b>email:</b><input name="email" type="text" size="20">
+	</p> 
+	意见栏<br><textarea name="suggest" rows=5 cols=60>
+	</textarea>
+	<P>
+	<td align="right">
+	<input type="submit" name="Submit" value="提交"></td>
+	 <td align="Left"> <input name="Reset" type="reset" value="取消">
+	</td>
+	</form>
+	</body>
+	</html>
